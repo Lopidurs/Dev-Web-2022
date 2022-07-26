@@ -1,0 +1,47 @@
+.footer{
+    background-color: #A6866A;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    vertical-align: middle;
+}
+p {
+    margin-bottom: 0;
+}
+.left{
+    grid-column: 1;
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+    vertical-align: middle;
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+.center{
+    margin-top: auto;
+    margin-bottom: auto;
+    grid-column: 2;
+
+}
+
+.right{
+    margin-top: auto;
+    margin-bottom: auto;
+    grid-column: 3;
+    text-align: right;
+}
+
+.center img{
+    width: 50px;
+    height: 50px;
+}
+
+.right svg{
+    width: 50px;
+    height: 50px;
+}

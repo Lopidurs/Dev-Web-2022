@@ -7,7 +7,9 @@ import Cours from './pages/Cours'
 import Confection from './pages/Confection'
 import Propos from './pages/Propos'
 import Header from './components/Header'
+import Footer from './components/Footer'
 import Error from './components/Error'
+
 
 ReactDOM.render(
     <React.StrictMode>
@@ -30,6 +32,7 @@ ReactDOM.render(
                     <Error />
                 </Route>
             </Switch>
+            <Footer />
         </Router>
     </React.StrictMode>,
     document.getElementById('root')

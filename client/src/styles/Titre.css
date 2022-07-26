@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css?family=Water+Brush");
+
+.titre{
+    text-align: center;
+    margin-top: 15%;
+    margin-bottom: 25%;
+}
+.titre img{
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+    animation: 3s linear 3s apparition;
+    animation-fill-mode: forwards;
+}
+.titre h1{
+    font-family: "Water Brush",sans-serif;
+    font-size: 170px;
+    text-align: center;
+    color: black;
+}
+.rectangle{
+    width  : 70%;
+    height : 11px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    animation: 2s linear slidein;
+}
+
+@keyframes slidein {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+}
+
+@keyframes apparition {
+    0% { opacity: 0; }
+    100%   { opacity: 1; }
+}
