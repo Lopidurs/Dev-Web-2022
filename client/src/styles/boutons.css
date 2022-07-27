@@ -1,12 +1,50 @@
 .bouton_plein{
-    background: #9AAAAA;
-    color: #0D0D0D;
+    background: var(--main-color);
+    color: var(--bg);
     border-radius: 30px;
     padding: 8px 20px 8px 20px;
     border: none;
+    font-weight: bold;
+}
+
+.bouton_plein a{
+    display: block;
+    width: 100%;
+    color: var(--secondary-color);
+    text-decoration: none;
 }
 
 .bouton_plein:hover{
-    opacity: 1.3;
-    background: #808c8c;
+    background: #7a802d;
 }
+
+.bouton_plein a:hover {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.bouton_transparent{
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 30px;
+    padding: 5px 17px 5px 17px;
+    border: 3px solid var(--main-color);
+    cursor: pointer;
+
+}
+.bouton_transparent a{
+    display: block;
+    width: 100%;
+    color: var(--main-color);
+    text-decoration: none;
+}
+.bouton_transparent:hover{
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.bouton_transparent a:hover {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+

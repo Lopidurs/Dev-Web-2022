@@ -9,6 +9,9 @@ import Propos from './pages/Propos'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Error from './components/Error'
+import Connexion from "./pages/Connexion";
+import Inscription from "./pages/Inscription";
+
 
 
 ReactDOM.render(
@@ -27,6 +30,12 @@ ReactDOM.render(
                 </Route>
                 <Route path="/propos">
                     <Propos />
+                </Route>
+                <Route path="/connexion">
+                    <Connexion />
+                </Route>
+                <Route path="/inscription">
+                    <Inscription />
                 </Route>
                 <Route>
                     <Error />

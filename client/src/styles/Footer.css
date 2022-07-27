@@ -1,13 +1,14 @@
 .footer{
-    background-color: #A6866A;
+    background-color: var(--secondary-color);
     display: grid;
     grid-template-columns: repeat(3,1fr);
     text-align: center;
     width: 100%;
-    bottom: 0;
     padding-top: 8px;
     padding-bottom: 8px;
     vertical-align: middle;
+    color: var(--main-color);
+    font-weight: bold;
 }
 p {
     margin-bottom: 0;
@@ -36,12 +37,14 @@ p {
     text-align: right;
 }
 
-.center img{
+.center svg{
     width: 50px;
     height: 50px;
 }
 
 .right svg{
+    fill: currentColor;
+    color: var(--main-color);
     width: 50px;
     height: 50px;
 }

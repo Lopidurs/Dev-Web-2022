@@ -5,25 +5,31 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  --main-color: #A4AA3C;
+  --secondary-color: #DFD3C5;
+  --text-color: #806752;
+  --bg: white;
 }
 
 body {
   font-family: "Karla", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",sans-serif,"WaterBrush";
-  background-color: #DFD3C5;
   overflow: overlay;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --scrollbar-color: #00000000;
+  height: 100%;
+  margin: 0;
 }
 h1 {
-  color: #A4AA3C
+  color: var(--main-color)
 }
 .container {
   max-width: 90%;
   margin-right: auto;
   margin-left: auto;
   padding: 1rem;
-  color: #A6866A;
+  color: var(--text-color);
+  min-height: calc(100vh - 126px);
 }
 
 article h1 {
