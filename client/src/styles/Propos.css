@@ -1,0 +1,25 @@
+.container-propos{
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-propos h1{
+    text-align: center;
+}
+.container-propos h2{
+    margin-top: 15px;
+}
+.container-propos .photo{
+    text-align: center;
+}
+
+.container-propos .photo img{
+    width: 400px;
+    height: 400px;
+}
+
+.container-propos .map{
+    text-align: center;
+    margin-top: 50px;
+}
