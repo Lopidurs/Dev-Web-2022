@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.css';
 
-function Presentation() {
+function Presentation_home() {
     return (
         <div className={"presentation"}>
             <div className={"text_confection"}>
@@ -51,4 +51,4 @@ function Presentation() {
     )
 }
 
-export default Presentation
+export default Presentation_home

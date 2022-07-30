@@ -17,11 +17,15 @@ function Inscription() {
                 </div>
                 <div className={"email"}>
                     <label htmlFor="e-mail">E-mail</label>
-                    <input type="text" name="e-mail" placeholder="example@gmail.com" autoComplete="off" required/>
+                    <input type="email" name="e-mail" placeholder="example@gmail.com" autoComplete="off" required/>
+                </div>
+                <div className={"phone"}>
+                    <label htmlFor="phone">Numéro de téléphone</label>
+                    <input type="tel" name="e-mail" placeholder="04** *** ***" autoComplete="off" pattern={"[0-9]{4} [0-9]{3} [0-9]{3}"} required/>
                 </div>
                 <div className={"password"}>
                     <label htmlFor="password">Mot de passe</label>
-                    <input type="password" name="password" placeholder="●●●●●●●●●" autoComplete="off" required/>
+                    <input type="password" name="password" placeholder="●●●●●●●●●" autoComplete="off"  required/>
                 </div>
                 <div className={"verfication"}>
                     <label htmlFor="Vpassword">Vérification du mot de passe</label>
