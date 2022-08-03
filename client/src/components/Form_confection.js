@@ -25,7 +25,7 @@ function Form_confection(){
                 </select>
             </div>
             <div className={"occasion"}>
-                <label htmlFor="type-vêtement">Pour quel occasion</label>
+                <label htmlFor="occasion">Pour quel occasion</label>
                 <select name="occasion" required>
                     <option value={"marriage"}>Mariage</option>
                     <option value={"soirée"}>Soirée</option>

@@ -10,6 +10,7 @@ import Footer from '../components/Footer'
 import Error from '../components/Error'
 import Connexion from "./Connexion";
 import Inscription from "./Inscription";
+import Admin from "./Admin";
 
 function App(){
     return(
@@ -34,6 +35,9 @@ function App(){
                     </Route>
                     <Route path="/inscription">
                         <Inscription />
+                    </Route>
+                    <Route path="/admin">
+                        <Admin />
                     </Route>
                     <Route>
                         <Error />
