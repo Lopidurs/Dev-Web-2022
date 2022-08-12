@@ -5,15 +5,6 @@ require('dotenv').config();
 const path = require('path');
 const session = require('express-session');
 
-///////////////// Passport ///////////////////////////
-const passport = require('passport');
-app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
-app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
-const modelUsers = require('./models/modelUsers');
-require('./config/passport.js')(passport, modelUsers);
-module.exports = passport;
-//////////////////////////////////////////////////////
 
 ///////////////// Body-parser ////////////////////////
 const bodyParser = require('body-parser');
