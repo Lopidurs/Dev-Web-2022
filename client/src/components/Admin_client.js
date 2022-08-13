@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import axios from "axios";
 import Table from 'react-bootstrap/Table';
 import Spinner from 'react-bootstrap/Spinner';
 
@@ -8,12 +9,12 @@ function Admin_client() {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch("https://api.example.com/items")
-            .then(res => res.json())
+        axios.get("http://localhost:3001/clients")
             .then(
                 (result) => {
                     setIsLoaded(true);
-                    setItems(result.items);
+                    setItems(result.data);
+                    console.log(result)
                 },
                 (error) => {
                     setIsLoaded(true);
@@ -39,14 +40,14 @@ function Admin_client() {
                 </tr>
                 </thead>
                 <tbody>
-                {items.map(item, index => {
+                {items.map((value, index) => {
                     return (
-                        <tr> key={`${index} - ${item}`}>
+                        <tr key={`${index} - ${value}`}>
                             <td>{index}</td>
-                            <td>{item.prenom}</td>
-                            <td>{item.nom}</td>
-                            <td>{item.email}</td>
-                            <td>{item.telephone}</td>
+                            <td>{value.FirstName}</td>
+                            <td>{value.LastName}</td>
+                            <td>{value.Email}</td>
+                            <td>{value.Phone}</td>
                         </tr>
                     )
                 })}

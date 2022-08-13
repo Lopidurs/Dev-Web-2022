@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
 import Spinner from 'react-bootstrap/Spinner';
+import axios from "axios";
 
 import Card_confection from "./Card_confection";
 
@@ -13,12 +14,11 @@ function Admin_confection(){
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch("https://api.example.com/items")
-            .then(res => res.json())
+        axios.get("http://localhost:3001/commands")
             .then(
                 (result) => {
                     setIsLoaded(true);
-                    setItems(result.items);
+                    setItems(result.data);
                 },
                 (error) => {
                     setIsLoaded(true);
@@ -39,7 +39,7 @@ function Admin_confection(){
                     <Row>
                         <Col sm={3}>
                             <Nav variant="pills" className="flex-column">
-                                {items.map(item, index => {
+                                {items.map((item, index) => {
                                     return (
                                         <Nav.Item>
                                             <Nav.Link key={`${index} - ${item}`} eventKey={`${index} - ${item}`}>
@@ -53,7 +53,7 @@ function Admin_confection(){
                         </Col>
                         <Col sm={9}>
                             <Tab.Content>
-                                {items.map(item, index => {
+                                {items.map((item, index) => {
                                     return (
                                         <Tab.Pane key={`${index} - ${item}`} eventKey={`${index} - ${item}`}>
                                             <Card_confection data={item} />

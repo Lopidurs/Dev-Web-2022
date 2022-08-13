@@ -1,6 +1,26 @@
+import axios from "axios";
+
 function Form_confection(){
+    function sendFormConf(event) {
+        if (localStorage.getItem('email') !== null) {
+            const demandeConfection = {
+                type_vetement: event.target[0].value,
+                occasion: event.target[1].value,
+                date: event.target[2].value,
+                commentaire: event.target[3].value,
+                fichier: event.target[4].value,
+                email: localStorage.getItem('email')
+            };
+            axios.post("/demandeConfection", demandeConfection, {withCredentials: true})
+            document.getElementById('comConfection').innerText = "Votre demande à été prit en compte";
+        } else {
+            event.preventDefault()
+            document.getElementById('comConfection').innerText = "Veuillez vous connecter!";
+        }
+    }
+
     return(
-        <form className="confection-form">
+        <form className="confection-form" onSubmit={sendFormConf}>
             <h1>Envoyer une demande pour une confection sur mesure</h1>
             <div className={"type-vêtement"}>
                 <label htmlFor="type-vêtement">Type de vêtements shouaiter</label>
@@ -49,6 +69,7 @@ function Form_confection(){
                 </label>
             </div>
             <button type="submit" className="bouton_plein">Envoyer votre demande</button>
+            <h1 id={"comConfection"}></h1>
         </form>
     )
 }

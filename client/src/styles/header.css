@@ -24,6 +24,10 @@
     font-size: 1.3rem;
     margin-left: 1rem;
 }
+
+#btnDeco {
+    color: var(--secondary-color);
+}
 .groupe_button{
     margin-left: auto;
     margin-right: 80px;
@@ -121,8 +125,7 @@ border: 0;
 }
 @media screen and (max-width: 768px) {
     .navigation-menu ul {
-        /* previous styles */
-        dipslay: none;
+        display: none;
     }
 }
 @media screen and (max-width: 768px) {
