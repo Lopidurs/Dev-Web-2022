@@ -1,12 +1,18 @@
 import { useState } from "react";
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import '../styles/header.css'
 import '../styles/boutons.css'
 import React from "react";
 
 function Header() {
     const [isNavExpanded, setIsNavExpanded] = useState(false)
+    let navigate = useNavigate()
 
+    function logout() {
+        localStorage.removeItem("accessToken")
+        navigate('/')
+        window.location.reload()
+    }
     return (
         <nav className="navigation">
             <a href="/" className="brand-name">
@@ -48,10 +54,11 @@ function Header() {
                 </ul>
 
         </div>
-        <div className={"groupe_button"}>
-            <button id={"myBtn"} className={"bouton_transparent"}><Link to="/inscription">S'inscrire</Link></button>
-            <button className={"bouton_plein"}><Link to="/connexion">Se connecter</Link></button>
-        </div>
+            {localStorage.getItem("accessToken") === null ? <div className={"groupe_button"}>
+                <button id={"myBtn"} className={"bouton_transparent"}><Link to="/inscription">S'inscrire</Link></button>
+                <button className={"bouton_plein"}><Link to="/connexion">Se connecter</Link></button>
+            </div> : <div className={"groupe_button"}><button id={"btnDeco"} className={"bouton_plein"} onClick={logout}>Se déconnecter</button> </div>
+            }
     </nav>
     );
 }

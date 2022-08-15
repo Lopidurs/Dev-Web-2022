@@ -14,7 +14,6 @@ function Admin_client() {
                 (result) => {
                     setIsLoaded(true);
                     setItems(result.data);
-                    console.log(result)
                 },
                 (error) => {
                     setIsLoaded(true);
@@ -29,7 +28,10 @@ function Admin_client() {
         return <div><h1>Clients :</h1><Spinner animation="border" /></div>;
     } else {
         return (
-            <Table striped bordered hover>
+            <>
+            <h1>Liste des clients :</h1>
+            <Table striped bordered hover className={"table_clients"}>
+
                 <thead>
                 <tr>
                     <th>#</th>
@@ -53,6 +55,7 @@ function Admin_client() {
                 })}
                 </tbody>
             </Table>
+            </>
         )
     }
 }

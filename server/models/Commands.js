@@ -15,14 +15,16 @@ module.exports = (sequelize, DataTypes) => {
         },
         Description: {
             type: DataTypes.TEXT,
-            allowNull: false
         },
         UriPicture: {
             type: DataTypes.STRING,
-            allowNull: false
         },
 
     })
+
+    Commands.associate = (models) => {
+        Commands.belongsTo(models.Clients)
+    }
 
     return Commands;
 }

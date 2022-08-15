@@ -28,14 +28,14 @@ function Admin_confection(){
     }, [])
 
     if (error) {
-        return <div><h1>Demandes :</h1>Erreur : {error.message}</div>;
+        return <div><h1>Liste des devis :</h1>Erreur : {error.message}</div>;
     } else if (!isLoaded) {
-        return <div><h1>Demandes :</h1><Spinner animation="border" /></div>;
+        return <div><h1>Liste des devis :</h1><Spinner animation="border" /></div>;
     } else {
         return (
             <div className={"admin-confection"}>
-                <h1>Demandes :</h1>
-                <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+                <h1>Liste des devis :</h1>
+                <Tab.Container classname={"tab-devis"} id="left-tabs-example" defaultActiveKey="first">
                     <Row>
                         <Col sm={3}>
                             <Nav variant="pills" className="flex-column">
@@ -43,8 +43,8 @@ function Admin_confection(){
                                     return (
                                         <Nav.Item>
                                             <Nav.Link key={`${index} - ${item}`} eventKey={`${index} - ${item}`}>
-                                                Un(e) <b>{item.type_vetement}</b> pour <b>{item.occasion}</b> avant
-                                                le: <b>{item.date}</b>
+                                                Un(e) <b>{item.Type}</b> pour <b>{item.Occasion}</b> avant
+                                                le: <b>{item.Date}</b>
                                             </Nav.Link>
                                         </Nav.Item>
                                     )

@@ -13,6 +13,8 @@ const clientRouter = require('./routes/Clients')
 app.use("/clients", clientRouter)
 const commandRouter = require('./routes/Commands')
 app.use("/commands", commandRouter)
+const lessonRouter = require('./routes/Lessons')
+app.use("/lessons", lessonRouter)
 
 db.sequelize.sync().then(() => {
     app.listen(PORT, () => {

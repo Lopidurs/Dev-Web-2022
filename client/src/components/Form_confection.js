@@ -1,22 +1,25 @@
 import axios from "axios";
 
+
 function Form_confection(){
     function sendFormConf(event) {
-        if (localStorage.getItem('email') !== null) {
-            const demandeConfection = {
-                type_vetement: event.target[0].value,
-                occasion: event.target[1].value,
-                date: event.target[2].value,
-                commentaire: event.target[3].value,
-                fichier: event.target[4].value,
-                email: localStorage.getItem('email')
-            };
-            axios.post("/demandeConfection", demandeConfection, {withCredentials: true})
-            document.getElementById('comConfection').innerText = "Votre demande à été prit en compte";
-        } else {
-            event.preventDefault()
-            document.getElementById('comConfection').innerText = "Veuillez vous connecter!";
-        }
+            axios.post("http://localhost:3001/commands", {
+                Type: event.target[0].value,
+                Occasion: event.target[1].value,
+                Date: event.target[2].value,
+                Description: event.target[3].value,
+                Image: event.target[4].value,
+            },{
+                headers: {
+                    accessToken: localStorage.getItem("accessToken")}
+            }).then((res) => {
+                if (res.data.error){
+                    event.preventDefault()
+                    document.getElementById('comConfection').innerText = "Veuillez vous connecter!";
+                } else {
+                    document.getElementById('comConfection').innerText = "Votre demande à été prit en compte";
+                }
+            })
     }
 
     return(
@@ -57,7 +60,7 @@ function Form_confection(){
             </div>
             <div className={"date"}>
                 <label htmlFor="date">Date butoire</label>
-                <input type="date" name="date"/>
+                <input type="date" name="date" required/>
             </div>
             <div className={"commentaire"}>
                 <label htmlFor="commentaire">Commentaire suplémentaire</label>
@@ -65,11 +68,11 @@ function Form_confection(){
             </div>
             <div className={"ajout-fichier"}>
                 <label htmlFor="file-upload" className={"bouton_transparent"}>Ajouter une photo
-                    <input type="file" id="file-upload" accept={"image/png, image/jpeg"}/>
+                    <input type="file" name={"Image"} id="file-upload" accept={"image/png, image/jpeg"}/>
                 </label>
             </div>
             <button type="submit" className="bouton_plein">Envoyer votre demande</button>
-            <h1 id={"comConfection"}></h1>
+            <div id={"comConfection"}></div>
         </form>
     )
 }

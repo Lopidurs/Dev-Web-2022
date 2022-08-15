@@ -1,18 +1,18 @@
-function Card_confection(data){
+function Card_confection(props){
     return(
         <div className={"card-confection"}>
             <h2>Type de vêtements shouaiter :</h2>
-            <div>{data.type_vetement}</div>
+            <div>{props.data.Type}</div>
             <h2>Occasion :</h2>
-            <div>{data.occasion}</div>
+            <div>{props.data.Occasion}</div>
             <h2>Pour :</h2>
-            <div>{data.prenom} {data.nom}</div>
+            <div>{props.data.Client.FirstName} {props.data.Client.LastName}</div>
             <h2>Date butoire :</h2>
-            <div>{data.date}</div>
+            <div>{props.data.Date}</div>
             <h2>Commentaire :</h2>
-            <div>{data.commentaire}</div>
+            <div>{props.data.Description}</div>
             <h2>Photo :</h2>
-            <div>{data.photo}</div>
+            <div>{props.data.Picture}</div>
         </div>
     )
 }

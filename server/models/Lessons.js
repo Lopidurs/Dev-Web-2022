@@ -27,5 +27,9 @@ module.exports = (sequelize, DataTypes) => {
         },
     })
 
+    Lessons.associate = (models) => {
+        Lessons.belongsToMany(models.Clients, { through: 'ClientsLessons'})
+    }
+
     return Lessons;
 }

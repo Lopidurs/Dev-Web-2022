@@ -14,4 +14,4 @@ function presentation_cours() {
     )
 }
 
-export default presentation_cours()
+export default presentation_cours

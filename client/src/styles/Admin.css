@@ -1,0 +1,45 @@
+h1{
+    text-align: center;
+}
+.mb-3{
+    color: var(--main-color)
+}
+
+.Admin_form_cours{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: auto;
+    background: var(--secondary-color);
+    border-radius: 10px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 50px 40px;
+}
+
+.Admin_form_cours button{
+    margin-top: 20px;
+    font-size: 1.5em;
+    grid-column: span 3;
+}
+
+.Admin_form_cours .titre{
+    grid-column: span 3;
+    margin: 0px;
+}
+
+.Admin_form_cours .commentaire{
+    grid-column: span 3;
+}
+
+.Admin_form_cours .Places{
+    grid-column: span 3;
+}
+
+.table_clients{
+    margin-top: 60px;
+}
+
+.tab-devis{
+    margin-top: 60px;
+}
