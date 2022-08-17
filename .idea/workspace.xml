@@ -1,24 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b594c28-e63d-4dd0-bc5a-ef122fdb254b" name="Changes" comment="Trop gros commit">
-      <change afterPath="$PROJECT_DIR$/client/src/tests/Admin_form_cours.test.js" afterDir="false" />
+    <list default="true" id="4b594c28-e63d-4dd0-bc5a-ef122fdb254b" name="Changes" comment="tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Admin_confection.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Admin_confection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Card_confection.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Card_confection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Inscription.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Inscription.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/tests/Admin_cours.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/Admin_cours.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/tests/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/tests/Card_confection.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/Card_confection.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/tests/Card_cours.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/Card_cours.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/tests/Connexion.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/Connexion.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/tests/Header.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/Header.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/tests/Inscription.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/Inscription.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/Lessons.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/Lessons.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +72,7 @@
       <workItem from="1660133400139" duration="3148000" />
       <workItem from="1660307399534" duration="35128000" />
       <workItem from="1660508060027" duration="11316000" />
-      <workItem from="1660569519699" duration="43623000" />
+      <workItem from="1660569519699" duration="44620000" />
     </task>
     <task id="LOCAL-00001" summary="Home page + footer">
       <created>1658863499256</created>
@@ -125,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659537779721</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="tests">
+      <created>1660700237654</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1660700237654</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +141,7 @@
     <MESSAGE value="Réorganistaion + début test" />
     <MESSAGE value="Admin" />
     <MESSAGE value="Trop gros commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trop gros commit" />
+    <MESSAGE value="tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="tests" />
   </component>
 </project>
