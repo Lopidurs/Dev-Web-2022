@@ -5,9 +5,7 @@ import { BrowserRouter as Router} from 'react-router-dom'
 describe('App', () => {
     it('Should render without crash',async () => {
         render(
-            <Router>
                 <App />
-            </Router>
         )
     })
 })

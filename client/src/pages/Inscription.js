@@ -16,8 +16,6 @@ function Inscription() {
                 Password: event.target[4].value
             };
             axios.post("http://localhost:3001/clients", newUser)
-            event.preventDefault()
-            document.getElementById('succes').innerText = "Votre compte à été créer avec succès!";
             navigate('/')
         } else {
             event.preventDefault()
@@ -55,7 +53,6 @@ function Inscription() {
                     <small id={"erreur"}></small>
                 </div>
                 <button type="submit" className="bouton_plein">S'inscrire</button>
-                <div id={"succes"}></div>
             </form>
         </div>
     )

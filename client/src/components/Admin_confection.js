@@ -13,12 +13,14 @@ function Admin_confection(){
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
 
+
     useEffect(() => {
         axios.get("http://localhost:3001/commands")
             .then(
                 (result) => {
                     setIsLoaded(true);
                     setItems(result.data);
+
                 },
                 (error) => {
                     setIsLoaded(true);
@@ -40,11 +42,12 @@ function Admin_confection(){
                         <Col sm={3}>
                             <Nav variant="pills" className="flex-column">
                                 {items.map((item, index) => {
+                                    let date = new Date(item.Date)
                                     return (
                                         <Nav.Item>
                                             <Nav.Link key={`${index} - ${item}`} eventKey={`${index} - ${item}`}>
                                                 Un(e) <b>{item.Type}</b> pour <b>{item.Occasion}</b> avant
-                                                le: <b>{item.Date}</b>
+                                                le: <b>{new Intl.DateTimeFormat(['ban', 'id']).format(date)}</b>
                                             </Nav.Link>
                                         </Nav.Item>
                                     )

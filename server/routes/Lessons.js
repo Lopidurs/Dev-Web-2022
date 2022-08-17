@@ -26,12 +26,16 @@ router.post("/ins/:id", validateToken, async (req, res) => {
         include: Lessons
     })
 
+    let match = 0
     client.Lessons.map((item) =>{
         console.log(item.dataValues.id)
         console.log(id)
-        if (item.dataValues.id == id) return res.json({error: "Vous êtes déjà inscrit au cour"})
+        if (item.dataValues.id == id) match = 1
     })
+
+    if (match ===1) return res.json({error: "Vous êtes déjà inscrit au cour"})
     await lesson.addClients(client, { through: ClientsLessons})
+    console.log('1')
     const newLesson = await Lessons.update(
         {
             Places: lesson.Places-1
@@ -40,8 +44,10 @@ router.post("/ins/:id", validateToken, async (req, res) => {
             where: {id : id}
         }
     )
-    res.json({succes: "Vous vous êtes bien inscrit!"})
+    console.log('2')
+    return res.json({succes: "Vous vous êtes bien inscrit!"})
 })
+
 
 router.get("/admin",async (req, res) => {
     const listOfLessons = await Lessons.findAll({include: Clients})

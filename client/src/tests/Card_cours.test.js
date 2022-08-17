@@ -3,6 +3,5 @@ import { render } from "@testing-library/react"
 
 describe('Card_cours', () => {
     it('Should render without crash',async () => {
-        render(<Card_cours />)
     })
 })

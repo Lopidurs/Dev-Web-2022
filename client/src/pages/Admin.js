@@ -18,7 +18,6 @@ function Admin() {
         axios.post("http://localhost:3001/clients/verify", {accessToken: localStorage.getItem("accessToken")})
             .then((res) => {
                 setRole(res.data)
-
         })
     })
     if (role === 1) {

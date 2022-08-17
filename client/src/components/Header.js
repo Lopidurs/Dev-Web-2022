@@ -28,7 +28,7 @@ function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
             </svg>
         </button>
-        <div className={
+        <div data-testid={"navMenu"} className={
             isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
         }>
 
