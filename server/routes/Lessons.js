@@ -6,11 +6,19 @@ const {ClientsLessons} = require("../models")
 const {validateToken} = require("../middleware/ClientMiddleware")
 
 router.get("/", async (req, res) => {
+    /*Cette fonction renvoie toutes les cours
+        PRE : /
+        POST : la liste des cours
+        */
     const listOfLessons = await Lessons.findAll()
     res.json(listOfLessons)
 })
 
 router.post("/", validateToken, async (req, res) => {
+    /*Cette fonction enregistre un nouveau cours après avoir vérifié que cela venait d'un admin
+        PRE : /
+        POST : le cours
+        */
     if (req.user.role !== 1) return res.json({error: "User is not an admin"})
     const lesson = req.body
     await Lessons.create(lesson)
@@ -18,6 +26,10 @@ router.post("/", validateToken, async (req, res) => {
 })
 
 router.post("/ins/:id", validateToken, async (req, res) => {
+    /*Cette fonction inscrit quelqu'un à un cours s'il reste de la place
+        PRE : un token
+        POST : /
+        */
     const id = req.params.id
     const lesson = await Lessons.findByPk(id)
     if (lesson.Places <= 0) return res.json({error: "Il n'y a plus de place disponible"})
@@ -50,6 +62,10 @@ router.post("/ins/:id", validateToken, async (req, res) => {
 
 
 router.get("/admin", async (req, res) => {
+    /*Cette fonction renvoie toutes les cours avec les clients participants
+        PRE : /
+        POST : la liste des cours
+        */
     const listOfLessons = await Lessons.findAll({include: Clients})
     res.json(listOfLessons)
 })

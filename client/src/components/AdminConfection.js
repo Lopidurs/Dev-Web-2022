@@ -15,6 +15,10 @@ function AdminConfection() {
 
 
     useEffect(() => {
+        /*Cette fonction va récupérer la liste des commandes et l'afficher
+        PRE : /
+        POST : la liste des commandes
+        */
         axios.get("https://gabrielle-squelin-back.herokuapp.com/commands")
             .then(
                 (result) => {

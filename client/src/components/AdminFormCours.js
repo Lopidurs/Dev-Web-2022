@@ -2,6 +2,10 @@ import axios from "axios";
 
 function AdminFormCours() {
     function sendFormLesson(event) {
+        /*Cette fonction va récupérer les données entrer dans le formulaire et l'envoyer au backend
+        PRE : les données du formulaire
+        POST : /
+        */
         event.preventDefault()
         axios.post("https://gabrielle-squelin-back.herokuapp.com/lessons", {
             Title: event.target[0].value,

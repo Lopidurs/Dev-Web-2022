@@ -9,6 +9,10 @@ function ListeCours() {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
+        /*Cette fonction va récupérer la liste des cours et l'afficher
+        PRE : /
+        POST : /
+        */
         axios.get("https://gabrielle-squelin-back.herokuapp.com/lessons")
             .then(
                 (result) => {

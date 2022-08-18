@@ -8,6 +8,11 @@ function Connexion() {
     let navigate = useNavigate();
 
     function sendForm(event) {
+        /*Cette fonction va récupérer les données entrer dans le formulaire et l'envoyer au backend puis si le compte
+        et le mot de passe sont bons, va enregistrer le token de la personne dans le local storage
+        PRE : /
+        POST : /
+        */
 
         const user = {
             Email: event.target[0].value,

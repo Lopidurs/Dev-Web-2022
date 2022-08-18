@@ -3,6 +3,10 @@ import axios from "axios";
 
 function FormConfection() {
     function sendFormConf(event) {
+        /*Cette fonction va récupérer les données entrer dans le formulaire et l'envoyer au backend avec le token de l'utilisateur
+        PRE : les données du formulaire
+        POST : /
+        */
         axios.post("https://gabrielle-squelin-back.herokuapp.com/commands", {
             Type: event.target[0].value,
             Occasion: event.target[1].value,

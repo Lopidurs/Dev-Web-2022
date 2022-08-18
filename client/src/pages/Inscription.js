@@ -8,6 +8,11 @@ function Inscription() {
     let navigate = useNavigate();
 
     function sendFormInscription(event) {
+        /*Cette fonction va récupérer les données entrer dans le formulaire, vérifier que les deux mots de passe
+         correspondent et le tout au backend
+        PRE : les données du formulaire
+        POST : /
+        */
         if (event.target[4].value === event.target[5].value) {
             const newUser = {
                 FirstName: event.target[1].value,

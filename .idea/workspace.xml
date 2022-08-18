@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b594c28-e63d-4dd0-bc5a-ef122fdb254b" name="Changes" comment="tests">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Admin_client.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdminClient.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Admin_confection.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdminConfection.js" afterDir="false" />
@@ -132,7 +131,7 @@
       <workItem from="1660307399534" duration="35128000" />
       <workItem from="1660508060027" duration="11316000" />
       <workItem from="1660569519699" duration="44999000" />
-      <workItem from="1660744423373" duration="10348000" />
+      <workItem from="1660744423373" duration="11724000" />
     </task>
     <task id="LOCAL-00001" summary="Home page + footer">
       <created>1658863499256</created>

@@ -15,6 +15,11 @@ import "../styles/Admin.css"
 function Admin() {
     const [role, setRole] = useState(null);
     useEffect(() => {
+        /*Cette fonction va envoyer le token de l'utilisateur au backend pour récupérer son rôle et lui donner accès
+        (ou pas) à la page admin
+        PRE : les données du formulaire
+        POST : /
+        */
         axios.post("https://gabrielle-squelin-back.herokuapp.com/clients/verify", {accessToken: localStorage.getItem("accessToken")})
             .then((res) => {
                 setRole(res.data)

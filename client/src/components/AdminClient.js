@@ -9,6 +9,10 @@ function AdminClient() {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
+        /*Cette fonction va récupérer la liste des clients et l'afficher
+        PRE : /
+        POST : la liste des clients
+        */
         axios.get("https://gabrielle-squelin-back.herokuapp.com/clients")
             .then(
                 (result) => {

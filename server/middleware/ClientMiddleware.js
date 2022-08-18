@@ -1,6 +1,11 @@
 const {verify} = require("jsonwebtoken")
 
 const validateToken = (req, res, next) => {
+    /*Cette fonction va récupérer un token et vérifier qu'il est légitime. Ensuite il stocke les infos du token
+     dans "user" et repasse la main
+        PRE : un token
+        POST : /
+        */
     const accessToken = req.header("accessToken")
 
     if (!accessToken) return res.json({error: "L'utilisateur n'est pas connecter"})

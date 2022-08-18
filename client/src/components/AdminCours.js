@@ -13,6 +13,10 @@ function AdminCours() {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
+        /*Cette fonction va récupérer la liste des cours et l'afficher
+        PRE : /
+        POST : la liste des cours
+        */
         axios.get("https://gabrielle-squelin-back.herokuapp.com/lessons/admin")
             .then(
                 (result) => {
