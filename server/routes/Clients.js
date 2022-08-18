@@ -1,13 +1,13 @@
 const express = require('express')
 const router = express.Router()
-const { Clients } = require("../models")
-const bcrypt = require("bcrypt")
-const { validateToken } = require("../middleware/ClientMiddleware")
+const {Clients} = require("../models")
+const bcrypt = require("bcryptjs")
+const {validateToken} = require("../middleware/ClientMiddleware")
 const {verify} = require("jsonwebtoken")
 
 const {sign} = require('jsonwebtoken')
 
-router.get("/",async (req, res) => {
+router.get("/", async (req, res) => {
     const listOfClients = await Clients.findAll()
     res.json(listOfClients)
 })
@@ -28,10 +28,10 @@ router.post("/", async (req, res) => {
 
 router.post('/login', async (req, res) => {
     const {FirstName, LastName, Email, Phone, Password} = req.body
-    const client = await Clients.findOne({ where: {Email: Email}})
-    if (!client) res.json({ error: "User doesn't exist!"})
+    const client = await Clients.findOne({where: {Email: Email}})
+    if (!client) res.json({error: "User doesn't exist!"})
     bcrypt.compare(Password, client.Password).then((match) => {
-        if(!match) res.json({error: "Wrong password"})
+        if (!match) res.json({error: "Wrong password"})
 
         const accesToken = sign({username: client.username, id: client.id, role: client.role}, "Af8974sgqqszryhbh")
         res.json(accesToken)

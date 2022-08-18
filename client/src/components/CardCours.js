@@ -1,19 +1,20 @@
 import axios from "axios";
 
-function Card_cours(props){
+function CardCours(props) {
     function inscriptionCours() {
-        axios.post(`http://localhost:3001/lessons/ins/${props.data.id}`,{}, {
+        axios.post(`https://gabrielle-squelin-back.herokuapp.com/lessons/ins/${props.data.id}`, {}, {
             headers: {
                 accessToken: localStorage.getItem("accessToken")
             }
         }).then((res) => {
-           if (res.data.error) alert(res.data.error)
-           if (res.data.succes) alert(res.data.succes)
+            if (res.data.error) alert(res.data.error)
+            if (res.data.succes) alert(res.data.succes)
         })
     }
+
     const date = new Date(props.data.Date)
 
-    return(
+    return (
         <div className={"card-cours"}>
             <h1>{props.data.Title}</h1>
             <div>Le : {new Intl.DateTimeFormat(['ban', 'id']).format(date)}</div>
@@ -25,4 +26,4 @@ function Card_cours(props){
     )
 }
 
-export default Card_cours
+export default CardCours

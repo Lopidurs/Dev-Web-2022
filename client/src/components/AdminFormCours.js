@@ -1,24 +1,25 @@
 import axios from "axios";
 
-function Admin_form_cours(){
+function AdminFormCours() {
     function sendFormLesson(event) {
         event.preventDefault()
-        axios.post("http://localhost:3001/lessons", {
+        axios.post("https://gabrielle-squelin-back.herokuapp.com/lessons", {
             Title: event.target[0].value,
             Date: event.target[1].value,
             BeginHour: event.target[2].value,
             EndHour: event.target[3].value,
             Description: event.target[4].value,
             Places: event.target[5].value,
-        },{
+        }, {
             headers: {
-                accessToken: localStorage.getItem("accessToken")}
+                accessToken: localStorage.getItem("accessToken")
+            }
         }).then((res) => {
             console.log(res)
         })
     }
 
-    return(
+    return (
         <div>
             <h1>Création d'un nouveau cours :</h1>
             <form className="Admin_form_cours" onSubmit={sendFormLesson}>
@@ -53,4 +54,4 @@ function Admin_form_cours(){
         </div>)
 }
 
-export default Admin_form_cours
+export default AdminFormCours

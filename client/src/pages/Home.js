@@ -1,11 +1,11 @@
 import Titre from '../components/Titre.js'
-import Presentation_home from "../components/Presentation_home";
+import PresentationHome from "../components/PresentationHome";
 
 function Home() {
     return (
         <div className="container">
-            <Titre />
-            <Presentation_home />
+            <Titre/>
+            <PresentationHome/>
         </div>
     )
 }

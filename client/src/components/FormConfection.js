@@ -1,28 +1,29 @@
 import axios from "axios";
 
 
-function Form_confection(){
+function FormConfection() {
     function sendFormConf(event) {
-            axios.post("http://localhost:3001/commands", {
-                Type: event.target[0].value,
-                Occasion: event.target[1].value,
-                Date: event.target[2].value,
-                Description: event.target[3].value,
-                Image: event.target[4].value,
-            },{
-                headers: {
-                    accessToken: localStorage.getItem("accessToken")}
-            }).then((res) => {
-                if (res.data.error){
-                    event.preventDefault()
-                    document.getElementById('comConfection').innerText = "Veuillez vous connecter!";
-                } else {
-                    document.getElementById('comConfection').innerText = "Votre demande à été prit en compte";
-                }
-            })
+        axios.post("https://gabrielle-squelin-back.herokuapp.com/commands", {
+            Type: event.target[0].value,
+            Occasion: event.target[1].value,
+            Date: event.target[2].value,
+            Description: event.target[3].value,
+            Image: event.target[4].value,
+        }, {
+            headers: {
+                accessToken: localStorage.getItem("accessToken")
+            }
+        }).then((res) => {
+            if (res.data.error) {
+                event.preventDefault()
+                document.getElementById('comConfection').innerText = "Veuillez vous connecter!";
+            } else {
+                document.getElementById('comConfection').innerText = "Votre demande à été prit en compte";
+            }
+        })
     }
 
-    return(
+    return (
         <form className="confection-form" onSubmit={sendFormConf}>
             <h1>Envoyer une demande pour une confection sur mesure</h1>
             <div className={"type-vêtement"}>
@@ -77,4 +78,4 @@ function Form_confection(){
     )
 }
 
-export default Form_confection
+export default FormConfection

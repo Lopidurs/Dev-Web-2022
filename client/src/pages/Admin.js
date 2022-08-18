@@ -1,12 +1,12 @@
 import React from "react";
-import Admin_confection from "../components/Admin_confection";
-import Admin_client from "../components/Admin_client";
+import AdminConfection from "../components/AdminConfection";
+import Admin_client from "../components/AdminClient";
 import Error from "../components/Error";
-import Admin_cours from "../components/Admin_cours";
+import AdminCours from "../components/AdminCours";
 import axios from "axios";
 import {useEffect} from "react";
 import {useState} from "react";
-import Admin_form_cours from "../components/Admin_form_cours";
+import AdminFormCours from "../components/AdminFormCours";
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import "../styles/Admin.css"
@@ -15,10 +15,10 @@ import "../styles/Admin.css"
 function Admin() {
     const [role, setRole] = useState(null);
     useEffect(() => {
-        axios.post("http://localhost:3001/clients/verify", {accessToken: localStorage.getItem("accessToken")})
+        axios.post("https://gabrielle-squelin-back.herokuapp.com/clients/verify", {accessToken: localStorage.getItem("accessToken")})
             .then((res) => {
                 setRole(res.data)
-        })
+            })
     })
     if (role === 1) {
         return (
@@ -28,14 +28,14 @@ function Admin() {
                     id="uncontrolled-tab-example"
                     className="mb-3"
                 >
-                    <Tab eventKey="Admin_form_cours" title="Création cours">
-                        <Admin_form_cours />
+                    <Tab eventKey="AdminFormCours" title="Création cours">
+                        <AdminFormCours/>
                     </Tab>
-                    <Tab eventKey="Admin_cours" title="Liste des cours">
-                        <Admin_cours/>
+                    <Tab eventKey="AdminCours" title="Liste des cours">
+                        <AdminCours/>
                     </Tab>
-                    <Tab eventKey="Admin_confection" title="Liste des devis">
-                        <Admin_confection/>
+                    <Tab eventKey="AdminConfection" title="Liste des devis">
+                        <AdminConfection/>
                     </Tab>
                     <Tab eventKey="Admin_client" title="Liste des clients">
                         <Admin_client/>

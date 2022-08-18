@@ -1,4 +1,4 @@
-function presentation_cours() {
+function presentationCours() {
     return (
         <div>
             <h1>Mes cours:</h1>
@@ -14,4 +14,4 @@ function presentation_cours() {
     )
 }
 
-export default presentation_cours
+export default presentationCours

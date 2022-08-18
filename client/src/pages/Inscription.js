@@ -6,6 +6,7 @@ import {useNavigate} from 'react-router-dom'
 
 function Inscription() {
     let navigate = useNavigate();
+
     function sendFormInscription(event) {
         if (event.target[4].value === event.target[5].value) {
             const newUser = {
@@ -15,7 +16,7 @@ function Inscription() {
                 Phone: event.target[3].value,
                 Password: event.target[4].value
             };
-            axios.post("http://localhost:3001/clients", newUser)
+            axios.post("https://gabrielle-squelin-back.herokuapp.com/clients", newUser)
             navigate('/')
         } else {
             event.preventDefault()
@@ -41,11 +42,12 @@ function Inscription() {
                 </div>
                 <div className={"phone"}>
                     <label htmlFor="phone">Numéro de téléphone</label>
-                    <input type="tel" name="phone" placeholder="04** *** ***" autoComplete="off" pattern={"[0-9]{4} [0-9]{3} [0-9]{3}"} required/>
+                    <input type="tel" name="phone" placeholder="04** *** ***" autoComplete="off"
+                           pattern={"[0-9]{4} [0-9]{3} [0-9]{3}"} required/>
                 </div>
                 <div className={"password"}>
                     <label htmlFor="password">Mot de passe</label>
-                    <input type="password" name="password" placeholder="●●●●●●●●●" autoComplete="off"  required/>
+                    <input type="password" name="password" placeholder="●●●●●●●●●" autoComplete="off" required/>
                 </div>
                 <div id={"verfication"} className={"verfication"}>
                     <label htmlFor="Vpassword">Vérification du mot de passe</label>
@@ -57,4 +59,5 @@ function Inscription() {
         </div>
     )
 }
+
 export default Inscription

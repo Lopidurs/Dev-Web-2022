@@ -2,7 +2,65 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b594c28-e63d-4dd0-bc5a-ef122fdb254b" name="Changes" comment="tests">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Admin_client.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdminClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Admin_confection.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdminConfection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Admin_cours.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdminCours.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Admin_form_cours.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdminFormCours.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Card_confection.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/CardConfection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Card_cours.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/CardCours.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Form_confection.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/FormConfection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Liste_cours.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ListeCours.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Presentation_confection.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/PresentationConfection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Presentation_cours.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/PresentationCours.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Presentation_home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/PresentationHome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Presentation_propos.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/PresentationPropos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Titre.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Titre.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Confection.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Confection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Connexion.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Connexion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Cours.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Cours.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Inscription.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Inscription.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Propos.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Propos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/Admin.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/Admin.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/Admin_client.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/AdminClient.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/Admin_confection.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/AdminConfection.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/Admin_cours.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/AdminCours.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/Admin_form_cours.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/AdminFormCours.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/App.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/Card_confection.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/CardConfection.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/Card_cours.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/CardCours.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/Confection.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/Confection.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/Connexion.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/Connexion.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/Cours.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/Cours.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/Error.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/Error.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/Footer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/Footer.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/Form_confection.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/FormConfection.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/Header.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/Header.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/Home.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/Home.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/Inscription.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/Inscription.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/Liste_cours.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/ListeCours.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/Map.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/Map.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/Presentation_confection.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/PresentationConfection.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/Presentation_home.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/PresentationHome.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/Presentation_propos.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/PresentationPropos.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/Propos.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/Propos.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/Titre.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/tests/Titre.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/middleware/ClientMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/middleware/ClientMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/middleware/ImagesMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/middleware/ImagesMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/Clients.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/Clients.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/ClientsLessons.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/ClientsLessons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/Lessons.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/Lessons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/Clients.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/Clients.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/Commands.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/Commands.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/Lessons.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/Lessons.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,7 +68,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/client" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -19,6 +77,7 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2CJH92bShoCiQIny7KduhDk0lWI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -72,7 +131,8 @@
       <workItem from="1660133400139" duration="3148000" />
       <workItem from="1660307399534" duration="35128000" />
       <workItem from="1660508060027" duration="11316000" />
-      <workItem from="1660569519699" duration="44620000" />
+      <workItem from="1660569519699" duration="44999000" />
+      <workItem from="1660744423373" duration="10348000" />
     </task>
     <task id="LOCAL-00001" summary="Home page + footer">
       <created>1658863499256</created>

@@ -1,6 +1,6 @@
 import photo from "../assets/GabrielleSquelin.jpg"
 
-function Presentation_propos() {
+function PresentationPropos() {
     return (
         <div>
             <h1>Gabrielle Squelin</h1>
@@ -53,4 +53,4 @@ function Presentation_propos() {
     )
 }
 
-export default Presentation_propos
+export default PresentationPropos

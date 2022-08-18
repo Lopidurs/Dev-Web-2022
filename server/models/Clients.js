@@ -32,9 +32,8 @@ module.exports = (sequelize, DataTypes) => {
         Clients.hasMany(models.Commands, {
             onDelete: "cascade"
         })
-        Clients.belongsToMany(models.Lessons, { through: 'ClientsLessons'})
+        Clients.belongsToMany(models.Lessons, {through: 'ClientsLessons'})
     }
-
 
 
     return Clients;

@@ -1,6 +1,6 @@
-function Card_confection(props){
+function CardConfection(props) {
     const date = new Date(props.data.Date)
-    return(
+    return (
         <div className={"card-confection"}>
             <h2>Type de vêtements shouaiter :</h2>
             <div data-testid={"Type"}>{props.data.Type}</div>
@@ -18,4 +18,4 @@ function Card_confection(props){
     )
 }
 
-export default Card_confection
+export default CardConfection

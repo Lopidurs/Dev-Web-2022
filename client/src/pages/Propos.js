@@ -1,14 +1,14 @@
 import React from "react";
 import "../styles/Propos.css"
-import Presentation_propos from "../components/Presentation_propos";
+import PresentationPropos from "../components/PresentationPropos";
 import Map from "../components/Map";
 
 function Propos() {
     return (
         <div className="container">
             <div className={"container-propos"}>
-                <Presentation_propos />
-                <Map />
+                <PresentationPropos/>
+                <Map/>
             </div>
         </div>
     )

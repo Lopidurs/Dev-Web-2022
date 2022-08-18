@@ -1,13 +1,13 @@
 const express = require('express')
 const router = express.Router()
-const { Commands } = require("../models")
-const { Clients } = require("../models")
-const { validateToken } = require("../middleware/ClientMiddleware")
-const { upload } = require("../middleware/ImagesMiddleware")
+const {Commands} = require("../models")
+const {Clients} = require("../models")
+const {validateToken} = require("../middleware/ClientMiddleware")
+const {upload} = require("../middleware/ImagesMiddleware")
 
 
-router.get("/",async (req, res) => {
-    const listOfCommands = await Commands.findAll({ include: Clients})
+router.get("/", async (req, res) => {
+    const listOfCommands = await Commands.findAll({include: Clients})
     res.json(listOfCommands)
 })
 

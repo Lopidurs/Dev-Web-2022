@@ -1,11 +1,11 @@
 const express = require('express')
 const router = express.Router()
-const { Clients } = require("../models")
-const { Lessons } = require("../models")
-const { ClientsLessons } = require("../models")
-const { validateToken } = require("../middleware/ClientMiddleware")
+const {Clients} = require("../models")
+const {Lessons} = require("../models")
+const {ClientsLessons} = require("../models")
+const {validateToken} = require("../middleware/ClientMiddleware")
 
-router.get("/",async (req, res) => {
+router.get("/", async (req, res) => {
     const listOfLessons = await Lessons.findAll()
     res.json(listOfLessons)
 })
@@ -27,21 +27,21 @@ router.post("/ins/:id", validateToken, async (req, res) => {
     })
 
     let match = 0
-    client.Lessons.map((item) =>{
+    client.Lessons.map((item) => {
         console.log(item.dataValues.id)
         console.log(id)
         if (item.dataValues.id == id) match = 1
     })
 
-    if (match ===1) return res.json({error: "Vous êtes déjà inscrit au cour"})
-    await lesson.addClients(client, { through: ClientsLessons})
+    if (match === 1) return res.json({error: "Vous êtes déjà inscrit au cour"})
+    await lesson.addClients(client, {through: ClientsLessons})
     console.log('1')
     const newLesson = await Lessons.update(
         {
-            Places: lesson.Places-1
+            Places: lesson.Places - 1
         },
         {
-            where: {id : id}
+            where: {id: id}
         }
     )
     console.log('2')
@@ -49,7 +49,7 @@ router.post("/ins/:id", validateToken, async (req, res) => {
 })
 
 
-router.get("/admin",async (req, res) => {
+router.get("/admin", async (req, res) => {
     const listOfLessons = await Lessons.findAll({include: Clients})
     res.json(listOfLessons)
 })

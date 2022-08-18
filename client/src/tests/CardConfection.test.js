@@ -1,9 +1,9 @@
-import Card_confection from "../components/Card_confection"
-import { render } from "@testing-library/react"
+import CardConfection from "../components/CardConfection"
+import {render} from "@testing-library/react"
 
-describe('Card_confection', () => {
-    it('Should render without crash and display the correct information',async () => {
-        const { getByTestId } = render(<Card_confection data=	{
+describe('CardConfection', () => {
+    it('Should render without crash and display the correct information', async () => {
+        const {getByTestId} = render(<CardConfection data={
             {
                 "id": 3,
                 "Type": "3pièces",
@@ -26,7 +26,7 @@ describe('Card_confection', () => {
                     "updatedAt": "2022-08-13T22:02:26.000Z"
                 }
             }
-        } />);
+        }/>);
         const Type = getByTestId("Type").textContent
         expect(Type).toEqual("3pièces")
         const Occasion = getByTestId("Occasion").textContent

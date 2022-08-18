@@ -1,10 +1,10 @@
-import Admin_cours from "../components/Admin_cours"
+import AdminCours from "../components/AdminCours"
 import {render} from "@testing-library/react"
 import {rest} from "msw"
 import {setupServer} from "msw/node"
 
 
-describe('Admin_cours', () => {
+describe('AdminCours', () => {
     const server = setupServer(rest.get('http://localhost:3001/lessons/admin', (req, res, ctx) => {
         return res(ctx.json([{
             id: 1,
@@ -68,13 +68,13 @@ describe('Admin_cours', () => {
     afterAll(() => server.close())
 
     it('Should render without crash', async () => {
-        render(<Admin_cours/>)
+        render(<AdminCours/>)
     })
 
     it('should handel server error', async () => {
         server.use(rest.get('http://localhost:3001/lessons/admin', (req, res, ctx) => {
             return res(ctx.status(500))
         }))
-        render(<Admin_cours/>)
+        render(<AdminCours/>)
     })
 })

@@ -4,7 +4,6 @@ import axios from "axios";
 import {useNavigate} from 'react-router-dom';
 
 
-
 function Connexion() {
     let navigate = useNavigate();
 
@@ -17,12 +16,11 @@ function Connexion() {
 
         event.preventDefault()
 
-        axios.post("http://localhost:3001/clients/login", user)
+        axios.post("https://gabrielle-squelin-back.herokuapp.com/clients/login", user)
             .then(res => {
                 if (res.data.error) {
                     alert(res.data.error)
-                }
-                else {
+                } else {
                     localStorage.setItem("accessToken", res.data)
                     navigate('/')
                     window.location.reload()
@@ -40,7 +38,8 @@ function Connexion() {
                 </div>
                 <div>
                     <label htmlFor="password">Mot de passe</label>
-                    <input type="password" name="password" id="password" placeholder="●●●●●●●●●" autoComplete="off" required/>
+                    <input type="password" name="password" id="password" placeholder="●●●●●●●●●" autoComplete="off"
+                           required/>
                 </div>
                 <button type="submit" className="bouton_plein">Se Connecter</button>
             </form>

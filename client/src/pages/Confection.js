@@ -1,14 +1,14 @@
 import React from "react";
 import "../styles/Confection.css"
-import Form_confection from "../components/Form_confection";
-import Presentation_confection from "../components/Presentation_confection";
+import FormConfection from "../components/FormConfection";
+import PresentationConfection from "../components/PresentationConfection";
 
 function Confection() {
     return (
         <div className="container">
             <div className={"confection"}>
-                <Form_confection />
-                <Presentation_confection/>
+                <FormConfection/>
+                <PresentationConfection/>
             </div>
         </div>
     )

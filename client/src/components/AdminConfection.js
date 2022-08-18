@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import {useState, useEffect} from 'react'
 import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
@@ -6,16 +6,16 @@ import Tab from 'react-bootstrap/Tab';
 import Spinner from 'react-bootstrap/Spinner';
 import axios from "axios";
 
-import Card_confection from "./Card_confection";
+import CardConfection from "./CardConfection";
 
-function Admin_confection(){
+function AdminConfection() {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
 
 
     useEffect(() => {
-        axios.get("http://localhost:3001/commands")
+        axios.get("https://gabrielle-squelin-back.herokuapp.com/commands")
             .then(
                 (result) => {
                     setIsLoaded(true);
@@ -32,7 +32,7 @@ function Admin_confection(){
     if (error) {
         return <div><h1>Liste des devis :</h1>Erreur : {error.message}</div>;
     } else if (!isLoaded) {
-        return <div><h1>Liste des devis :</h1><Spinner animation="border" /></div>;
+        return <div><h1>Liste des devis :</h1><Spinner animation="border"/></div>;
     } else {
         return (
             <div className={"admin-confection"}>
@@ -59,7 +59,7 @@ function Admin_confection(){
                                 {items.map((item, index) => {
                                     return (
                                         <Tab.Pane key={`${index} - ${item}`} eventKey={`${index} - ${item}`}>
-                                            <Card_confection data={item} />
+                                            <CardConfection data={item}/>
                                         </Tab.Pane>
                                     )
                                 })}
@@ -73,4 +73,4 @@ function Admin_confection(){
 }
 
 
-export default Admin_confection
+export default AdminConfection
